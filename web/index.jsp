@@ -38,7 +38,7 @@
                     String name = request.getParameter("name");
                     String photo = request.getParameter("phototosave");
                     con = (Connection) DriverManager.getConnection(
-                        "jdbc:mysql://46.227.62.21:3306/nikolaosdb", "nikolaos", "Sp#r0s1967!");
+                        "jdbc:mysql://localhost:3306/nikolaosdb", "nikolaos", "1234567890");
                     st0 = con.createStatement();
                     int i = st0.executeUpdate("insert into person(id,name,photo)values('" + id + "','" + name + "','" + photo + "')");
                     out.println("Person data is successfully inserted! (" + i + " record)");
@@ -47,7 +47,7 @@
                 }
 
                 con = (Connection) DriverManager.getConnection(
-                        "jdbc:mysql://46.227.62.21:3306/nikolaosdb", "nikolaos", "Sp#r0s1967!");
+                        "jdbc:mysql://localhost:3306/nikolaosdb", "nikolaos", "1234567890");
                 st1 = con.createStatement();
                 ResultSet rs = st1.executeQuery("select * from person");
 
